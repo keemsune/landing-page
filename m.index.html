@@ -77,14 +77,37 @@
     </main>
     <script>
         // 리소스 경로 업데이트
-        if (window.location.hostname === 'keemsune.github.io') {
-            const BASE_URL = '/landing-page';
-            const resources = document.querySelectorAll('link[href^="css/"], script[src^="js/"], img[src^="images/"]');
-            resources.forEach(resource => {
-                const attr = resource.hasAttribute('href') ? 'href' : 'src';
-                resource[attr] = `${BASE_URL}/${resource.getAttribute(attr)}`;
-            });
-        }
+        const isGitHubPages = window.location.hostname === 'keemsune.github.io';
+        const BASE_URL = isGitHubPages ? '/landing-page' : '';
+
+        // 이미지와 스타일시트 경로 업데이트
+        const resources = document.querySelectorAll('link[href^="css/"], script[src^="js/"], img[src^="images/"]');
+        resources.forEach(resource => {
+            const attr = resource.hasAttribute('href') ? 'href' : 'src';
+            resource[attr] = `${BASE_URL}/${resource.getAttribute(attr)}`;
+        });
+
+        // 배경 이미지 업데이트
+        const updateBackgroundImages = () => {
+            const section1 = document.querySelector('.section1-bg');
+            const section2 = document.querySelector('.section2-bg');
+            const section3 = document.querySelector('.section3-bg');
+
+            if (section1) {
+                section1.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section1-bg.png')`;
+            }
+            if (section2) {
+                section2.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section2-bg.png')`;
+            }
+            if (section3) {
+                section3.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section3-bg.png')`;
+            }
+        };
+
+        // DOM이 로드된 후 배경 이미지 업데이트
+        document.addEventListener('DOMContentLoaded', updateBackgroundImages);
+        // 바로 실행
+        updateBackgroundImages();
     </script>
 </body>
 </html>
