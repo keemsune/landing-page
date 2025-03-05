@@ -22,33 +22,18 @@ function detectMobileAndRedirect() {
 
     if (isGitHubPages) {
         // GitHub Pages 경로 처리
-        const pathSegments = currentURL.pathname.split('/');
-        const repoName = 'landing-page';  // GitHub 저장소 이름
-        const repoIndex = pathSegments.indexOf(repoName);
-        
-        // 저장소 경로가 없으면 리턴
-        if (repoIndex === -1) {
-            return;
-        }
-
-        // 기본 경로나 index.html로 접근했을 때만 리다이렉트
-        const lastSegment = pathSegments[pathSegments.length - 1];
-        if (lastSegment !== '' && lastSegment !== 'index.html') {
-            return;
-        }
-
-        // 모바일 페이지 경로 생성
-        pathSegments[pathSegments.length - 1] = 'm.index.html';
-        mobilePath = pathSegments.join('/');
+        mobilePath = '/landing-page/m.index.html';
     } else {
         // 로컬 환경 경로 처리
-        mobilePath = currentURL.pathname === '/' || currentURL.pathname.endsWith('index.html') 
-            ? 'm.index.html' 
-            : currentURL.pathname.replace('index.html', 'm.index.html');
+        const baseDir = currentURL.pathname.substring(0, currentURL.pathname.lastIndexOf('/') + 1);
+        mobilePath = baseDir + 'm.index.html';
     }
 
+    // search와 hash 파라미터 유지
+    const fullPath = mobilePath + currentURL.search + currentURL.hash;
+
     // 모바일 페이지로 리다이렉트
-    window.location.href = mobilePath;
+    window.location.href = fullPath;
 }
 
 // DOM이 완전히 로드된 후 실행
