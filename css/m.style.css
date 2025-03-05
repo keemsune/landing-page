@@ -237,6 +237,31 @@ img {
     padding-bottom: 120px;
 }
 
+.section4-bg-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 200px;
+    padding: 0;
+    position: relative;
+}
+
+.section4-bg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section4-text-overlay {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+    padding: 0 20px;
+}
+
 .section4-main-title {
     color: #FFF;
     text-align: center;
@@ -246,7 +271,18 @@ img {
     font-style: normal;
     font-weight: 550;
     line-height: 48px;
-    margin: 100px 0 40px;
+    margin-bottom: 24px;
+}
+
+.section4-sub-title {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Gmarket Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
 }
 
 .section4-title::after {
@@ -265,18 +301,4 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-.section4-bg-container {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
-    margin-top: 200px;
-    padding: 0;
-}
-
-.section4-bg-img {
-    width: 100%;
-    height: auto;
-    display: block;
 } 
