@@ -46,7 +46,7 @@ section {
 
 /* 섹션1 스타일 */
 .section1-bg {
-    background: url('../images/mobile/m-section1-bg.png') no-repeat center center;
+    background: url('/landing-page/images/mobile/m-section1-bg.png') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -124,7 +124,7 @@ section {
 
 /* 섹션2 스타일 */
 .section2-bg {
-    background-image: url('../images/mobile/m-section2-bg.png');
+    background-image: url('/landing-page/images/mobile/m-section2-bg.png');
     background-size: cover;
     background-position: center;
     padding: 120px 0;
@@ -172,7 +172,7 @@ section {
 
 /* 섹션3 스타일 */
 .section3-bg {
-    background-image: url('../images/mobile/m-section3-bg.png');
+    background-image: url('/landing-page/images/mobile/m-section3-bg.png');
     background-size: cover;
     padding: 120px 0;
 }
