@@ -33,7 +33,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const images = document.querySelectorAll('img[src*="/images/"]');
         images.forEach(img => {
             const originalSrc = img.getAttribute('src');
-            img.src = `${BASE_URL}${originalSrc}`;
+            if (!originalSrc.startsWith(BASE_URL)) {
+                img.src = `${BASE_URL}${originalSrc}`;
+            }
         });
     };
 
