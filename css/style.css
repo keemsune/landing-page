@@ -34,8 +34,6 @@ img {
     height: 642px;
     background-image: url('../images/section1-bg.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: flex-start;
 }
@@ -108,8 +106,6 @@ img {
     height: 1090px;
     background-image: url('../images/section2-bg.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
@@ -171,8 +167,6 @@ img {
     height: 666px;
     background-image: url('../images/section3-bg.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
@@ -212,7 +206,8 @@ img {
 .section4-bg {
     width: 100%;
     height: 2333px;
-    background: linear-gradient(180deg, #17322D 0%, #151515 60%);  /* 그라데이션 배경 */
+    background: linear-gradient(180deg, #17322D 0%, #151515 60%), url('../images/section4-bg.png') no-repeat center -400px;
+    background-size: 100% 100%, 100% auto;
     display: flex;
     align-items: flex-start;
     position: relative;
@@ -220,6 +215,8 @@ img {
 
 .section4-container {
     margin-top: 100px;
+    position: relative;
+    z-index: 2;
 }
 
 .section4-content {
@@ -261,18 +258,21 @@ img {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    top: 900px;
+    z-index: 1;
 }
 
 .section4-frame-bg {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    margin-top: -220px;
 }
 
 .frame-content {
     position: absolute;
-    top: 240px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 1032px;
@@ -407,16 +407,15 @@ img {
 .section5-bg {
     width: 100%;
     height: 740px;
-    background-image: url('../images/section5-bg.png');
+    background: url('../images/section5-bg.png') no-repeat center top;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: center;
 }
 
 .section5-container {
-    height: 444px;  /* 컨테이너 높이 설정 */
+    height: 444px;
+    margin-top: 0;
 }
 
 .section5-content {
@@ -510,9 +509,7 @@ img {
     width: 100%;
     height: 500px;
     background-image: url('../images/section6-bg.png');
-    background-size: 1920px auto;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
 }
@@ -523,8 +520,6 @@ img {
     height: 828px;
     background-image: url('../images/section7-bg.png');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     overflow: hidden;
 }
 
@@ -603,9 +598,7 @@ img {
     width: 100%;
     height: 70vh;
     background-image: url('../images/section8-bg.png');
-    background-size: 1920px auto;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
 }

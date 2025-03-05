@@ -3,16 +3,35 @@ function detectMobileAndRedirect() {
     // 모바일 디바이스 체크를 위한 정규식
     const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
     
-    // 현재 페이지가 모바일 페이지가 아니고, 모바일 디바이스로 접속한 경우
-    if (mobileRegex.test(navigator.userAgent) && !window.location.pathname.includes('m.index.html')) {
-        // 현재 URL을 기반으로 모바일 페이지 URL 생성
-        const currentPath = window.location.pathname;
-        const mobilePath = currentPath.replace('index.html', 'm.index.html');
-        
-        // 모바일 페이지로 리다이렉트
-        window.location.href = mobilePath;
+    // 모바일이 아니면 리턴
+    if (!mobileRegex.test(navigator.userAgent)) {
+        return;
     }
+
+    // 현재 URL 가져오기
+    const currentURL = new URL(window.location.href);
+    
+    // 이미 모바일 페이지면 리턴
+    if (currentURL.pathname.includes('m.index.html')) {
+        return;
+    }
+
+    // GitHub Pages의 경우 baseURL 처리
+    const baseURL = currentURL.pathname.substring(0, currentURL.pathname.lastIndexOf('/') + 1);
+    
+    // 쿠키로 리다이렉트 여부 확인
+    if (document.cookie.includes('redirected=true')) {
+        return;
+    }
+
+    // 리다이렉트 쿠키 설정 (1시간 유효)
+    const date = new Date();
+    date.setTime(date.getTime() + (60 * 60 * 1000));
+    document.cookie = "redirected=true; expires=" + date.toUTCString() + "; path=/";
+
+    // 모바일 페이지로 리다이렉트
+    window.location.href = baseURL + 'm.index.html';
 }
 
-// 페이지 로드 시 실행
-window.addEventListener('load', detectMobileAndRedirect); 
+// DOM이 완전히 로드된 후 실행
+document.addEventListener('DOMContentLoaded', detectMobileAndRedirect); 
