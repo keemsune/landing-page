@@ -127,7 +127,7 @@ section {
 .section2-bg {
     background-size: cover;
     background-position: center;
-    padding: 120px 0;
+    padding: 100px 0;
     width: 100%;
 }
 
@@ -136,10 +136,10 @@ section {
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 550;
-    line-height: 48px; /* 138.462% */
+    line-height: 40px; /* 138.462% */
     margin-bottom: 80px;
 }
 
@@ -173,7 +173,7 @@ section {
 /* 섹션3 스타일 */
 .section3-bg {
     background-size: cover;
-    padding: 120px 0;
+    padding: 100px 0;
 }
 
 .section3-title {
