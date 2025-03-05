@@ -12,18 +12,18 @@ function detectMobileAndRedirect() {
     const currentURL = new URL(window.location.href);
     
     // 이미 모바일 페이지면 리턴
-    if (currentURL.pathname.includes('m.index.html')) {
+    if (currentURL.pathname.endsWith('m.index.html')) {
+        return;
+    }
+
+    // index.html이나 / 로 끝나는 경우에만 리다이렉션
+    if (!currentURL.pathname.endsWith('index.html') && !currentURL.pathname.endsWith('/')) {
         return;
     }
 
     // GitHub Pages의 경우 baseURL 처리
     const baseURL = currentURL.pathname.substring(0, currentURL.pathname.lastIndexOf('/') + 1);
     
-    // 쿠키로 리다이렉트 여부 확인
-    if (document.cookie.includes('redirected=true')) {
-        return;
-    }
-
     // 리다이렉트 쿠키 설정 (1시간 유효)
     const date = new Date();
     date.setTime(date.getTime() + (60 * 60 * 1000));
