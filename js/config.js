@@ -30,11 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 이미지 src 경로 업데이트
     const updateImageSources = () => {
-        const images = document.querySelectorAll('img');
+        const images = document.querySelectorAll('img[src*="/images/"]');
         images.forEach(img => {
-            if (img.src.includes('/images/')) {
-                img.src = BASE_URL + img.getAttribute('src');
-            }
+            const originalSrc = img.getAttribute('src');
+            img.src = `${BASE_URL}${originalSrc}`;
         });
     };
 
