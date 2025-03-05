@@ -1,5 +1,6 @@
 // 환경에 따른 기본 경로 설정
-const BASE_URL = window.location.hostname === 'keemsune.github.io' ? '/landing-page' : '';
+const isGitHubPages = window.location.hostname === 'keemsune.github.io';
+const BASE_URL = isGitHubPages ? '/landing-page' : '';
 
 // CSS 변수로 설정
 document.documentElement.style.setProperty('--base-url', BASE_URL);
@@ -9,26 +10,45 @@ window.BASE_URL = BASE_URL;
 
 // DOM이 로드된 후 실행
 document.addEventListener('DOMContentLoaded', function() {
-    // 현재 환경이 GitHub Pages인 경우 리소스 경로 업데이트
-    if (window.location.hostname === 'keemsune.github.io') {
-        // CSS와 JS 파일 경로 업데이트
-        const cssLink = document.querySelector('link[href^="css/"]');
-        const scripts = document.querySelectorAll('script[src^="js/"]');
-        
-        if (cssLink) {
-            cssLink.href = `${BASE_URL}/${cssLink.getAttribute('href')}`;
+    // base 태그 처리
+    const baseTag = document.querySelector('base');
+    if (baseTag) {
+        if (!isGitHubPages) {
+            baseTag.remove();
         }
-        
-        scripts.forEach(script => {
-            script.src = `${BASE_URL}/${script.getAttribute('src')}`;
-        });
-
-        // 이미지 src 경로 업데이트
-        const images = document.querySelectorAll('img[src^="images/"]');
-        images.forEach(img => {
-            img.src = `${BASE_URL}/${img.getAttribute('src')}`;
-        });
     }
+
+    // 리소스 경로 업데이트 함수
+    const updateResourcePaths = () => {
+        if (isGitHubPages) {
+            // CSS와 JS 파일 경로 업데이트
+            const cssLinks = document.querySelectorAll('link[rel="stylesheet"]');
+            const scripts = document.querySelectorAll('script[src]');
+            
+            cssLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && !href.startsWith('/landing-page')) {
+                    link.href = `${BASE_URL}/${href}`;
+                }
+            });
+            
+            scripts.forEach(script => {
+                const src = script.getAttribute('src');
+                if (src && !src.startsWith('/landing-page')) {
+                    script.src = `${BASE_URL}/${src}`;
+                }
+            });
+
+            // 이미지 src 경로 업데이트
+            const images = document.querySelectorAll('img[src]');
+            images.forEach(img => {
+                const src = img.getAttribute('src');
+                if (src && !src.startsWith('/landing-page')) {
+                    img.src = `${BASE_URL}/${src}`;
+                }
+            });
+        }
+    };
 
     // 배경 이미지 경로 업데이트
     const updateBackgroundImages = () => {
@@ -36,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const section2 = document.querySelector('.section2-bg');
         const section3 = document.querySelector('.section3-bg');
 
-        const bgPath = window.location.hostname === 'keemsune.github.io' ? `${BASE_URL}/images/mobile/` : 'images/mobile/';
+        const bgPath = isGitHubPages ? `${BASE_URL}/images/mobile/` : 'images/mobile/';
 
         if (section1) {
             section1.style.backgroundImage = `url('${bgPath}m-section1-bg.png')`;
@@ -49,5 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    // 모든 업데이트 함수 실행
+    updateResourcePaths();
     updateBackgroundImages();
 }); 

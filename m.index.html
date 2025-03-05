@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>데이블 - 모바일</title>
+    <title>데이블 랜딩페이지</title>
     <script src="js/config.js"></script>
     <link rel="stylesheet" href="css/m.style.css">
     <script src="js/device-redirect.js"></script>
@@ -78,14 +78,11 @@
     <script>
         // 리소스 경로 업데이트
         const isGitHubPages = window.location.hostname === 'keemsune.github.io';
-        const BASE_URL = isGitHubPages ? '/landing-page' : '';
-
-        // 이미지와 스타일시트 경로 업데이트
-        const resources = document.querySelectorAll('link[href^="css/"], script[src^="js/"], img[src^="images/"]');
-        resources.forEach(resource => {
-            const attr = resource.hasAttribute('href') ? 'href' : 'src';
-            resource[attr] = `${BASE_URL}/${resource.getAttribute(attr)}`;
-        });
+        
+        if (!isGitHubPages) {
+            // 로컬 환경에서는 base 태그 제거
+            document.querySelector('base').remove();
+        }
 
         // 배경 이미지 업데이트
         const updateBackgroundImages = () => {
@@ -93,14 +90,16 @@
             const section2 = document.querySelector('.section2-bg');
             const section3 = document.querySelector('.section3-bg');
 
+            const bgPath = isGitHubPages ? 'images/mobile/' : 'images/mobile/';
+
             if (section1) {
-                section1.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section1-bg.png')`;
+                section1.style.backgroundImage = `url('${bgPath}m-section1-bg.png')`;
             }
             if (section2) {
-                section2.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section2-bg.png')`;
+                section2.style.backgroundImage = `url('${bgPath}m-section2-bg.png')`;
             }
             if (section3) {
-                section3.style.backgroundImage = `url('${BASE_URL}/images/mobile/m-section3-bg.png')`;
+                section3.style.backgroundImage = `url('${bgPath}m-section3-bg.png')`;
             }
         };
 
