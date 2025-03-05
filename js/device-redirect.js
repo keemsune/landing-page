@@ -16,21 +16,28 @@ function detectMobileAndRedirect() {
         return;
     }
 
-    // index.html이나 / 로 끝나는 경우에만 리다이렉션
-    if (!currentURL.pathname.endsWith('index.html') && !currentURL.pathname.endsWith('/')) {
+    // GitHub Pages 경로 처리
+    const pathSegments = currentURL.pathname.split('/');
+    const repoName = 'landing-page';  // GitHub 저장소 이름
+    const repoIndex = pathSegments.indexOf(repoName);
+    
+    // 저장소 경로가 없거나 이미 모바일 페이지면 리턴
+    if (repoIndex === -1) {
         return;
     }
 
-    // GitHub Pages의 경우 baseURL 처리
-    const baseURL = currentURL.pathname.substring(0, currentURL.pathname.lastIndexOf('/') + 1);
-    
-    // 리다이렉트 쿠키 설정 (1시간 유효)
-    const date = new Date();
-    date.setTime(date.getTime() + (60 * 60 * 1000));
-    document.cookie = "redirected=true; expires=" + date.toUTCString() + "; path=/";
+    // 기본 경로나 index.html로 접근했을 때만 리다이렉트
+    const lastSegment = pathSegments[pathSegments.length - 1];
+    if (lastSegment !== '' && lastSegment !== 'index.html') {
+        return;
+    }
+
+    // 모바일 페이지 경로 생성
+    pathSegments[pathSegments.length - 1] = 'm.index.html';
+    const mobilePath = pathSegments.join('/');
 
     // 모바일 페이지로 리다이렉트
-    window.location.href = baseURL + 'm.index.html';
+    window.location.href = mobilePath;
 }
 
 // DOM이 완전히 로드된 후 실행
