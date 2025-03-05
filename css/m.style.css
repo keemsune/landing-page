@@ -285,6 +285,21 @@ img {
     line-height: 36px;
 }
 
+.green-box {
+    background: #148652;
+    padding: 8px 24px;
+    margin: 8px 0;
+    display: inline-block;
+    color: #FFF;
+}
+
+.highlight-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 28px;
+    line-height: 40px;
+}
+
 .section4-title::after {
     content: '';
     position: absolute;
