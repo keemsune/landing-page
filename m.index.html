@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>데이블 - 모바일</title>
-    <script>
-        // GitHub Pages 환경 확인
-        const isGitHubPages = window.location.hostname === 'keemsune.github.io';
-        const BASE_URL = isGitHubPages ? '/landing-page' : '';
-        
-        // 동적으로 CSS와 JS 파일 로드
-        document.write(`<link rel="stylesheet" href="${BASE_URL}/css/m.style.css">`);
-        document.write(`<script src="${BASE_URL}/js/config.js"><\/script>`);
-        document.write(`<script src="${BASE_URL}/js/device-redirect.js"><\/script>`);
-    </script>
+    <script src="js/config.js"></script>
+    <link rel="stylesheet" href="css/m.style.css">
+    <script src="js/device-redirect.js"></script>
 </head>
 <body>
     <main>
@@ -82,5 +75,16 @@
             </div>
         </section>
     </main>
+    <script>
+        // 리소스 경로 업데이트
+        if (window.location.hostname === 'keemsune.github.io') {
+            const BASE_URL = '/landing-page';
+            const resources = document.querySelectorAll('link[href^="css/"], script[src^="js/"], img[src^="images/"]');
+            resources.forEach(resource => {
+                const attr = resource.hasAttribute('href') ? 'href' : 'src';
+                resource[attr] = `${BASE_URL}/${resource.getAttribute(attr)}`;
+            });
+        }
+    </script>
 </body>
 </html>
