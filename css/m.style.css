@@ -129,6 +129,8 @@ section {
     background-position: center;
     padding: 100px 0;
     width: 100%;
+    position: relative;
+    z-index: 0;
 }
 
 .section2-title {
@@ -174,6 +176,10 @@ section {
 .section3-bg {
     background-size: cover;
     padding: 100px 0;
+    position: relative;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    z-index: 1;
 }
 
 .section3-title {
@@ -181,10 +187,10 @@ section {
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 32px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 550;
-    line-height: 48px; /* 138.462% */
+    line-height: 40px; /* 138.462% */
     margin-bottom: 80px;
 }
 
@@ -209,6 +215,8 @@ img {
     width: 100%;
     padding: 0;
     overflow: hidden;
+    position: relative;
+    z-index: 0;
 }
 
 .section4-container {
