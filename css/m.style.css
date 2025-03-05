@@ -237,6 +237,18 @@ img {
     padding-bottom: 120px;
 }
 
+.section4-main-title {
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: "Gmarket Sans";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 48px;
+    margin: 100px 0 40px;
+}
+
 .section4-title::after {
     content: '';
     position: absolute;
