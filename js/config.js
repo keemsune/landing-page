@@ -4,7 +4,7 @@ const BASE_URL = window.location.hostname === 'localhost' || window.location.hos
     : '/landing-page';
 
 // CSS 변수로 설정
-document.documentElement.style.setProperty('--base-url', `"${BASE_URL}"`);
+document.documentElement.style.setProperty('--base-url', BASE_URL);
 
 // 전역 변수로 내보내기
 window.BASE_URL = BASE_URL;
