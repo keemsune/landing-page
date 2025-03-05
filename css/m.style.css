@@ -49,7 +49,7 @@ section {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    min-height: calc(100vh - 160px);
+    min-height: calc(100vh - 60px);
     display: flex;
     align-items: flex-start;
     padding: 0;
@@ -97,15 +97,15 @@ section {
     color: #FFF;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 40px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 550;
-    line-height: 52px;
+    line-height: 44px;
     letter-spacing: -0.5px;
 }
 
 .list-frame {
-    margin: 230px 0 0 32px;
+    margin: 240px 0 0 32px;
 }
 
 .section1-list {
@@ -116,10 +116,10 @@ section {
     color: #FFF;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 350;
-    line-height: 26px;
+    line-height: 24px;
     margin-bottom: 12px;
 }
 

@@ -32,7 +32,7 @@ img {
 .section1-bg {
     width: 100%;
     height: 642px;
-    background-image: url('/landing-page/images/section1-bg.png');
+    background-image: url('../images/section1-bg.png');
     background-size: cover;
     display: flex;
     align-items: flex-start;
@@ -104,7 +104,7 @@ img {
 .section2-bg {
     width: 100%;
     height: 1090px;
-    background-image: url('/landing-page/images/section2-bg.png');
+    background-image: url('../images/section2-bg.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -165,7 +165,7 @@ img {
 .section3-bg {
     width: 100%;
     height: 666px;
-    background-image: url('/landing-page/images/section3-bg.png');
+    background-image: url('../images/section3-bg.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -206,7 +206,7 @@ img {
 .section4-bg {
     width: 100%;
     height: 2333px;
-    background: linear-gradient(180deg, #17322D 0%, #151515 60%), url('/landing-page/images/section4-bg.png') no-repeat center -400px;
+    background: linear-gradient(180deg, #17322D 0%, #151515 60%), url('../images/section4-bg.png') no-repeat center -400px;
     background-size: 100% 100%, 100% auto;
     display: flex;
     align-items: flex-start;
@@ -407,7 +407,7 @@ img {
 .section5-bg {
     width: 100%;
     height: 740px;
-    background: url('/landing-page/images/section5-bg.png') no-repeat center top;
+    background: url('../images/section5-bg.png') no-repeat center top;
     background-size: cover;
     display: flex;
     align-items: center;
@@ -508,7 +508,7 @@ img {
 .section6-bg {
     width: 100%;
     height: 500px;
-    background-image: url('/landing-page/images/section6-bg.png');
+    background-image: url('../images/section6-bg.png');
     background-size: cover;
     display: flex;
     align-items: center;
@@ -518,7 +518,7 @@ img {
 .section7-bg {
     width: 100%;
     height: 828px;
-    background-image: url('/landing-page/images/section7-bg.png');
+    background-image: url('../images/section7-bg.png');
     background-size: cover;
     overflow: hidden;
 }
@@ -597,7 +597,7 @@ img {
 .section8-bg {
     width: 100%;
     height: 70vh;
-    background-image: url('/landing-page/images/section8-bg.png');
+    background-image: url('../images/section8-bg.png');
     background-size: cover;
     display: flex;
     align-items: center;
