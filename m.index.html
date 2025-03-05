@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>랜딩 페이지 - 모바일</title>
-    <link rel="stylesheet" href="/landing-page/css/m.style.css">
-    <script src="/landing-page/js/device-redirect.js"></script>
+    <title>데이블 - 모바일</title>
+    <script src="js/config.js"></script>
+    <script>
+        // 동적으로 CSS와 JS 파일 경로 설정
+        document.write(`<link rel="stylesheet" href="${window.BASE_URL}/css/m.style.css">`);
+        document.write(`<script src="${window.BASE_URL}/js/device-redirect.js"><\/script>`);
+    </script>
 </head>
 <body>
     <main>
