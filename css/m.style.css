@@ -1,3 +1,22 @@
+/* 웹폰트 import */
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Gmarket Sans';
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+}
+
 /* 모바일 기본 스타일 */
 * {
     margin: 0;
@@ -81,6 +100,7 @@ section {
     font-style: normal;
     font-weight: 550;
     line-height: 54px; /* 125% */
+    letter-spacing: -0.5px;
 }
 
 .list-frame {
