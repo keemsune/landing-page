@@ -267,11 +267,11 @@ img {
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 32px;
+    font-size: 44px;
     font-style: normal;
-    font-weight: 550;
-    line-height: 48px;
-    margin-bottom: 24px;
+    font-weight: 500;
+    line-height: 56px;
+    margin-bottom: 64px;
 }
 
 .section4-sub-title {
@@ -279,25 +279,62 @@ img {
     text-align: center;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 24px;
+    font-size: 26px;
     font-style: normal;
     font-weight: 500;
-    line-height: 36px;
+    line-height: 32px;
+    display: inline-block;
 }
 
 .green-box {
     background: #148652;
-    padding: 8px 24px;
-    margin: 8px 0;
-    display: inline-block;
+    padding: 4px 8px;
+    display: inline-flex;
+    align-items: center;
     color: #FFF;
+    font-size: 26px;
+    line-height: 32px;
+    vertical-align: middle;
 }
 
 .highlight-text {
     display: block;
-    margin-top: 8px;
-    font-size: 28px;
-    line-height: 40px;
+    margin-top: 16px;
+    font-size: 40px;
+    line-height: 26px;
+    color: #FFF;
+}
+
+.info-box {
+    margin-top: 48px;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.info-box-title {
+    background: #0F6F44;
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    padding: 16px;
+    text-align: center;
+}
+
+.info-box-content {
+    background: #FFF;
+    color: #000;
+    font-family: "Gmarket Sans";
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 24px;
+    text-align: center;
 }
 
 .section4-title::after {
