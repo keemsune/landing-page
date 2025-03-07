@@ -52,7 +52,7 @@ section {
     min-height: calc(100vh - 60px);
     display: flex;
     align-items: flex-start;
-    padding: 0;
+    padding: 64px 32px;
     position: relative;
 }
 
@@ -78,7 +78,7 @@ section {
 }
 
 .title-frame {
-    margin: 100px 0 0 32px;
+    margin: 0;
     position: relative;
 }
 
@@ -105,7 +105,7 @@ section {
 }
 
 .list-frame {
-    margin: 240px 0 0 32px;
+    margin: 240px 0 0 0;
 }
 
 .section1-list {
@@ -116,10 +116,10 @@ section {
     color: #FFF;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: "Gmarket Sans";
-    font-size: 18px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 350;
-    line-height: 24px;
+    line-height: 20px;
     margin-bottom: 12px;
 }
 
@@ -271,7 +271,7 @@ img {
     font-style: normal;
     font-weight: 500;
     line-height: 56px;
-    margin-bottom: 64px;
+    margin-bottom: 56px;
 }
 
 .section4-sub-title {
@@ -330,23 +330,23 @@ img {
     background: #FFF;
     color: #000;
     font-family: "Gmarket Sans";
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-    padding: 24px;
+    padding: 20px;
 
     text-align: center;
 }
 
 .question-box {
-    margin-top: 64px;
+    margin-top: 56px;
     width: 100%;
     max-width: 320px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 32px;
     background: #0F6F44;
-    padding: 64px 16px 40px;
+    padding: 56px 16px 32px;
 }
 
 .question-box-title {
