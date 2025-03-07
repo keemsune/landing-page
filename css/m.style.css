@@ -334,7 +334,55 @@ img {
     font-weight: 500;
     line-height: 24px;
     padding: 24px;
+
     text-align: center;
+}
+
+.question-box {
+    margin-top: 64px;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 32px;
+    background: #0F6F44;
+    padding: 64px 16px 40px;
+}
+
+.question-box-title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Gmarket Sans";
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 38px;
+    margin-bottom: 20px;
+}
+
+.question-box-title .highlight-text {
+    color: #FCBA99;
+    display: inline;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.question-box-content {
+    width: 100%;
+    text-align: center;
+}
+
+.graphic-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.process-img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .section4-title::after {
@@ -353,4 +401,428 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+/* 섹션5 스타일 */
+.section5-bg {
+    background: url('../images/mobile/m-section5-bg.png') no-repeat center center;
+    background-size: 100% auto;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 64px 0;
+    overflow-x: hidden;
+}
+
+.section5-container {
+    width: 100%;
+    padding: 0;
+    overflow-x: visible;
+}
+
+.section5-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.section5-title {
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 26px;
+    font-weight: 550;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    text-align: center;
+    display: block;
+}
+
+.section5-title .highlight-text {
+    color: #FCBA99;
+    display: inline;
+    font-size: 26px;
+}
+
+.section5-subtitle {
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 80px;
+    background: linear-gradient(90deg, #0F6F44 0%, #2B9767 100%);
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 32px;
+}
+
+.advantage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.advantage-item {
+    background: #FFF;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.advantage-item .number {
+    color: #0F6F44;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 28px;
+    margin-bottom: 0;
+    display: inline;
+}
+
+.advantage-item .text {
+    color: #000;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+    margin: 0;
+    display: inline;
+}
+
+/* 섹션6 스타일 */
+.section6-bg {
+    background: url('../images/mobile/m-section6-bg.png') no-repeat center center;
+    background-size: 100% auto;
+    width: 100vw;
+    height: 280px;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    overflow: hidden;
+    position: relative;
+}
+
+.section6-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+}
+
+.section6-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
+
+/* 섹션7 스타일 */
+.section7-bg {
+    background: url('../images/mobile/m-section7-bg.png') no-repeat center center;
+    background-size: 100% auto;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 64px 0 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.section7-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section7-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.section7-subtitle {
+    color: #0F6F44;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 16px;
+}
+
+.section7-title {
+    color: #000;
+    font-family: "Gmarket Sans";
+    font-size: 26px;
+    font-weight: 550;
+    line-height: 34px;
+    margin-bottom: 40px;
+}
+
+.section7-phone-container {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.section7-phone {
+    width: auto;
+    max-width: none;
+    height: auto;
+    display: block;
+    margin-bottom: -4px;
+}
+
+/* 섹션8 스타일 */
+.section8-bg {
+    background: url('../images/mobile/m-section8-bg.png') no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 64px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.section8-container {
+    width: 100%;
+    position: relative;
+    padding: 0 20px;
+}
+
+.section8-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.section8-title {
+    display: inline-flex;
+    padding: 2px 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: #0F6F44;
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.section8-main-text {
+    color: #000;
+    text-align: center;
+    font-family: "Gmarket Sans";
+    font-size: 26px;
+    font-weight: 550;
+    line-height: 32px;
+    margin-bottom: 8px;
+}
+
+.section8-sub-text {
+    color: #3FCB8B;
+    text-align: center;
+    font-family: "Gmarket Sans";
+    font-size: 20px;
+    font-weight: 550;
+    line-height: 24px;
+    margin-bottom: 40px;
+}
+
+.consultation-box {
+    width: 100%;
+    padding: 48px 24px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, #0F6F44 0%, #13402E 100%);
+}
+
+.consultation-title {
+    color: #FFF;
+    text-align: center;
+    font-family: "Gmarket Sans";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 4px;
+}
+
+.consultation-subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: "Gmarket Sans";
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 24px;
+}
+
+.consultation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-select {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: none;
+    background: #FFF;
+    color: #666;
+    font-family: "Gmarket Sans";
+    font-size: 15px;
+    font-weight: 400;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23666666' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+}
+
+.form-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 10px;
+    border: none;
+    background: #FFF;
+    color: #666;
+    font-family: "Gmarket Sans";
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-input::placeholder {
+    color: #666;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 4px 0;
+    width: 100%;
+    min-height: 32px;
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: none;
+    background: #FFF;
+    appearance: none;
+    position: relative;
+    flex-shrink: 0;
+    margin: 10px 0 0 0;
+}
+
+.form-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #0F6F44;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.checkbox-text {
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    margin: 14px 0 0 0;
+}
+
+.submit-button {
+    width: 100%;
+    height: 64px;
+    border-radius: 12px;
+    background: #3FCB8B;
+    border: none;
+    color: #FFF;
+    font-family: "Gmarket Sans";
+    font-size: 20px;
+    font-weight: 550;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.submit-button:hover {
+    background: #35B67C;
+}
+
+/* Footer 스타일 */
+.footer {
+    background: #242424;
+    padding: 48px 32px 80px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-title {
+    color: #FFF;
+    font-family: "Noto Sans CJK KR";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-text p {
+    color: #FFF;
+    font-family: "Noto Sans CJK KR";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0.8;
+}
+
+.copyright {
+    color: #FFF;
+    font-family: "Noto Sans CJK KR";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    opacity: 0.6;
 } 
